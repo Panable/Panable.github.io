@@ -1,0 +1,1114 @@
+/* --- NAVIGATION START --- */
+/* Google font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins');
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display');
+@import url('https://fonts.googleapis.com/css?family=Inria Sans');
+
+* {
+    margin: 0;
+    font-family: 'Inria Sans', 'ui-serif';
+}
+
+/* Fixes position at top of viewport */
+header {
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(26, 24, 24, 0.75);
+    position: static;
+    top: 0;
+    width: 100%; /* Ensure full width */
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+/* Logo sizing & positioning */
+nav > a > img {
+    margin: 0.4rem 5.75%;
+    width: 35px;
+    height: auto;
+}
+
+/* Pushes list to the right of viewport */
+nav > ul {
+    font-family: 'Inria Sans', serif;
+    float: right;
+    list-style-type: none;
+    margin: 10px 20px;
+    display: flex;
+}
+
+/* Text styling */
+nav > ul > li {
+    font-size: 1.4em;
+    letter-spacing: .2rem;
+    text-transform: uppercase;
+    margin: 0 20px;
+}
+
+/* Moves list slightly left */
+nav > ul li:last-child {
+    margin-right: 60px;
+}
+
+/* anchor styling */
+nav > ul > li > a {
+    text-decoration: none;
+    color: #D5B778;
+}
+
+/* Overrides second <li> to grey */
+ul li:nth-child(2) a {
+    color: #D9D9D9;
+}
+
+/* Overrides third <li> to green */
+ul li:nth-child(3) a {
+    color: #86BB8F;
+}
+
+/* Overrides forth <li> to grey */
+ul li:nth-child(4) a {
+    color: #D9D9D9;
+}
+
+/* --- NAVIGATION END --- */
+
+/* Horizontal rule styling */
+hr {
+    margin: 0;
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgb(166, 166, 166, 0), rgba(166, 166, 166, 0.75), rgba(166, 166, 166, 0));
+}
+
+/* --- FOOTER START --- */
+
+/* Footer styling */
+footer {
+    background: #212121 none;
+    width: auto;
+    height: 3rem;
+    color: #DEDEDE;
+    font-family: 'Inria Sans', serif;
+}
+
+/* Pushes first <p> left */
+footer > p {
+    display: inline;
+    float: left;
+    margin: 0.75rem;
+}
+
+/* Pushes second <p> right */
+footer > p:last-child {
+    display: inline;
+    float: right;
+}
+
+/* --- FOOTER END --- */
+
+/* --- NAVIGATION END --- */
+
+/* --- HOMEPAGE START --- */
+
+* {
+    margin: 0;
+    font-family: 'Inria Sans', 'ui-serif';
+}
+
+/* Background colour */
+body {
+    background-image: url("../images/Backdrop.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* --- MAIN START --- */
+/* Grid settings */
+.homepageMain {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto;
+    gap: 35px;
+    margin: 20px 15%;
+}
+
+/* --- SECTION 1 START --- */
+.homepageSection1 {
+    padding: 20px 40px;
+    grid-column-start: 1;
+    grid-column-end: 6;
+    background-color: #272626;
+    border-radius: 25px;
+    color: #D9D9D9;
+}
+
+.homepageSection1 > div {
+    display: inline-block;
+    float: right;
+}
+
+/* Logo size & position */
+.homepageSection1 > .logo {
+    width: 50px;
+    height: auto;
+    margin: 0;
+}
+
+/* Image position */
+.homepageSection1 > img {
+    width: 100%;
+    margin: 10px 0;
+}
+
+/* H1 styling & position */
+.homepageSection1 > div > h1 {
+    text-transform: uppercase;
+    border-right: .15em solid #D9D9D9;
+    font-weight: unset;
+    letter-spacing: .5rem;
+    font-size: 2.35rem;
+    color: #D9D9D9;
+    margin: 0;
+}
+
+/* --- SECTION 1 END --- */
+/* --- SECTION 2 START --- */
+/* Section 2 styling */
+.homepageSection2 {
+    padding: 20px 40px;
+    background-color: #333333;
+    border-radius: 25px;
+    color: #D9D9D9;
+    grid-column: 1 / span 2; /* Span two columns */
+}
+
+/* H2 styling & position */
+.homepageSection2 > h2 {
+    text-transform: uppercase;
+    font-weight: unset;
+    letter-spacing: .2rem;
+    color: #D5B778;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+/* Square dot-points */
+.homepageSection2 > ul {
+    list-style-type: square;
+    padding-left: 20px; /* Adjust padding */
+}
+
+/* Spacing between list items */
+li + li {
+    margin-top: 10px; /* Adjust margin */
+}
+
+/* --- SECTION 2 END --- */
+/* --- SECTION 3 START --- */
+/* Section 3 styling */
+.homepageSection3 {
+    padding: 20px 40px;
+    background-color: #404040;
+    border-radius: 25px;
+    color: #D9D9D9;
+    grid-column: 3 / -1; /* Span from column 3 to last column */
+}
+
+.homepageSection3 > h2 {
+    text-transform: uppercase;
+    color: #86BB8F;
+    font-weight: unset;
+    letter-spacing: .2rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Removes list styling */
+.homepageSection3 > ul {
+    list-style-type: none;
+    padding-left: 0; /* Remove padding */
+}
+
+/* --- SECTION 3 END --- */
+
+/* --- SECTION 4 START --- */
+/* iframe styling */
+.homepageSection4 {
+    grid-column-start: 1;
+    grid-column-end: 6;
+}
+
+.homepageSection4 > iframe {
+    display: block;
+    width: 100%;
+    height: 40vw; /* Adjust height */
+    border-radius: 25px;
+}
+
+/* --- SECTION 4 END --- */
+
+/* --- SECTION 5 START --- */
+/* Section 5 styling */
+.homepageSection5 {
+    padding: 20px;
+    background-color: #252424;
+    border-radius: 25px;
+    color: #D9D9D9;
+    grid-column: 1 / span 4; /* Span four columns */
+}
+
+/* H2 styling & position */
+.homepageSection5 > h2 {
+    font-size: 1.5rem; /* Adjust font size */
+    margin-bottom: 10px; /* Adjust margin */
+    text-align: center;
+}
+
+/* --- SECTION 5 END --- */
+/* Button styling */
+.homepageButton {
+    text-transform: uppercase;
+    font-weight: unset;
+    letter-spacing: .2rem;
+    background-color: #26A641;
+    color: #000000;
+    text-decoration: none;
+    border-radius: 18px;
+    justify-self: center;
+    margin: auto;
+    padding: 15px 30px;
+}
+
+/* --- MAIN END --- */
+
+/* --- ANIMATIONS START --- */
+
+/* Selection Highlighter */
+::selection {
+    color: #000000;
+    background: #a3a3a3;
+}
+
+/* Adds shadow on hover */
+.homepageMain > section:hover {
+    box-shadow: 0 0 20px 10px #000000;
+    transition: box-shadow 2s ease-in-out;
+}
+
+.homepageMain > section:not(:hover) {
+    box-shadow: 0 0 0 0 #000000;
+    transition: box-shadow 2s ease-in-out;
+}
+
+/* type writer animation */
+.text {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 3.5s steps(19), cursor 0.5s step-end infinite alternate;
+}
+
+/* flashing of cursor */
+@keyframes cursor {
+    50% {
+        border-color: transparent;
+    }
+}
+
+/* movement for type writer */
+@keyframes typing {
+    from {
+        width: 0
+    }
+    to {
+        width: 100%
+    }
+}
+
+/* --- ANIMATIONS END --- */
+
+/* --- HOMEPAGE END --- */
+
+/* --- JOBS START --- */
+* {
+    margin: 0;
+    font-family: 'Inria Sans', 'ui-serif';
+}
+
+/* --- MAIN START --- */
+
+/* Grid settings */
+.jobsMain {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto;
+    gap: 38px;
+    margin: 20px 15%;
+    min-height: 85vh
+}
+
+/* --- SECTION 1 START --- */
+
+/* Section 1 styling */
+.jobsSection1 {
+    padding: 20px 40px;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    background-color: #252424;
+    border-radius: 25px;
+    color: #D9D9D9;
+}
+
+/* Heading styling*/
+.jobsSection1 > h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: unset;
+    letter-spacing: .2rem;
+    margin-bottom: 20px;
+}
+
+/* Font styling */
+.jobsSection1 > p:first-of-type {
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    margin-bottom: 20px;
+}
+
+.jobsSection1 > p:last-of-type {
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    margin: 20px 0;
+}
+
+/* --- SECTION 1 END --- */
+
+/* --- SECTION 2 START --- */
+
+/* Section styling */
+.jobsSection2 {
+    padding: 20px 40px;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    background-color: #252424;
+    border-radius: 25px;
+    color: #D9D9D9;
+}
+
+/* Heading styling */
+.jobsSection2 > h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: unset;
+    letter-spacing: .2rem;
+    margin-bottom: 20px;
+}
+
+/* Font styling */
+.jobsSection2 > p:first-of-type {
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    margin-bottom: 20px;
+}
+
+.jobsSection2 > p:last-of-type {
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    margin: 20px 0;
+}
+
+/* --- SECTION 2 END --- */
+
+/* --- ASIDE START --- */
+
+/* Fixed sidebar */
+aside {
+    grid-column-start: 4;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    height: min-content;
+    overflow: hidden;
+    padding: 20px 40px;
+    background-color: #424242;
+    border-radius: 25px;
+    color: #D9D9D9;
+    position: sticky;
+    top: 20px;
+}
+
+/* Image formatting */
+aside > img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* H2 styling */
+aside > h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: unset;
+    letter-spacing: .2rem;
+    margin-bottom: 20px;
+}
+
+/* H3 styling */
+aside > h3 {
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    font-weight: unset;
+    margin: 20px 0 10px 0;
+}
+
+/* Spacing between list items */
+li + li {
+    margin: 20px 0;
+}
+
+/* --- ASIDE END --- */
+.jobs Hr {
+    position: relative;
+}
+
+.jobsFooter {
+    position: static;
+    width: 100%;
+    bottom: 0;
+}
+
+/* --- ANIMATION START --- */
+
+/* Button formatting */
+.applyButton {
+    display: grid;
+    text-transform: uppercase;
+    background-color: #26A641;
+    color: #000000;
+    text-decoration: none;
+    border-radius: 25px;
+    border: none;
+    padding: 15px 35px;
+    cursor: pointer;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Removes checkbox */
+.readMoreState {
+    display: none;
+}
+
+/* Hides content */
+.readMoreTarget {
+    display: none;
+    opacity: 0;
+    max-height: 0;
+    font-size: 0;
+    transition: .25s ease;
+}
+
+/* Read more button */
+.readMoreTrigger {
+    cursor: pointer;
+    display: grid;
+    padding: 0 15px;
+    color: #8F8F8F;
+    font-size: .9em;
+    line-height: 2;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Sets content visible */
+.readMoreState:checked ~ .readMoreWrapper .readMoreTarget {
+    display: block;
+    opacity: 1;
+    font-size: inherit;
+    max-height: 999em;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* Changes label text (Before) */
+.readMoreState ~ .readMoreTrigger:before {
+    content: 'Show More'
+}
+
+/* Changes label text (After) */
+.readMoreState:checked ~ .readMoreTrigger:before {
+    content: 'Show Less'
+}
+
+/* --- ANIMATION END --- */
+
+/* --- JOBS END --- */
+
+/* --- APPLY START --- */
+
+/* --- MAIN START --- */
+
+/* Grid settings */
+.apply_page_main {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto;
+    gap: 38px;
+    margin: 20px 13.5%;
+}
+
+.apply_page_h1 {
+    color: #D9D9D9;
+    grid-column-start: 3;
+    grid-row-start: 1;
+    width: auto;
+    white-space: nowrap;
+}
+
+/* Background colour */
+.apply_page_body {
+    background-color: #1A1818;
+}
+
+form {
+    display: grid;
+    padding: 20px 40px;
+    margin: 20px 13.5%;
+
+    grid-column-start: 1;
+    grid-column-end: 6;
+    gap: 20px;
+    border-radius: 25px;
+
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+
+    color: #D9D9D9;
+    background-color: #252424;
+    min-width: 40%;
+}
+
+/* Label styling */
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #D9D9D9;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #D9D9D9;
+    border-radius: 5px;
+    background-color: #252424;
+    color: #D9D9D9;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"] {
+    width: calc(100% - 20px);
+}
+
+/* ----- RADIO BUTTON CSS ------ */
+.custom-radio {
+    list-style-type: none;
+    padding: 0;
+}
+
+.custom-radio label,
+.custom-radio input {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.custom-radio input[type="radio"] {
+    opacity: 0.01;
+    z-index: 100;
+}
+
+.custom-radio input[type="radio"]:checked + label,
+.Checked + label {
+    background: #26A641;
+    color: #000000;
+}
+
+.custom-radio label {
+    padding: 5px;
+    border: 1px solid #CCC;
+    cursor: pointer;
+    z-index: 90;
+}
+
+.custom-radio label:hover {
+    background: #D5B778;
+    color: #000000;
+}
+
+/* ----- INPUT STYLING ------ */
+
+/* Checkbox styling */
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+/* Button styling */
+input[type="submit"],
+input[type="reset"] {
+    text-transform: uppercase;
+    background-color: #26A641;
+    color: #FFFFFF;
+    text-decoration: none;
+    border-radius: 25px;
+    border: none;
+    padding: 15px 30px;
+    cursor: pointer;
+}
+
+input[type="reset"] {
+    background-color: #8F702D;
+    color: #FFFFFF;
+}
+
+input[type="submit"] {
+    background-color: #3E844B;
+    color: #FFFFFF;
+}
+
+/* Skillset checkboxes on one line */
+fieldset span {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Adjusting checkbox spacing */
+fieldset span label {
+    margin-right: 15px;
+}
+
+/* Other skills textarea adjustments */
+fieldset textarea {
+    width: calc(100% - 30px); /* Adjusting width to accommodate for label margin */
+}
+
+legend {
+    text-transform: uppercase;
+    color: #D9D9D9;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Adjust Job Reference Number label */
+label[for="job_reference_number"] {
+    grid-column: span 2;
+    display: flex;
+    align-items: center;
+}
+
+/* Adjust Job Reference Number input */
+input#job_reference_number {
+    grid-column: span 2;
+}
+
+/* --- APPLY END --- */
+
+/* --- ABOUT US START --- */
+
+.about-us {
+    margin: 0;
+    background-color: #1A1818;
+    background-image: none !important;
+}
+
+.title {
+    font-size: 3em;
+    font-family: 'Poppins', serif;
+    text-align: center;
+    margin: 5%;
+}
+
+/* Style the first h2 element with the class "title" within the 1st & 4th section */
+article:nth-of-type(1) h2.title, section:nth-of-type(2) h2.title {
+    color: #D5B778;
+}
+
+/* Style the */
+section:nth-of-type(1) h2.title {
+    color: #86BB8F;
+}
+
+
+/* --- SECTION  1 START (About Us) --- */
+.about {
+    overflow: auto;
+
+}
+
+/* Div container for content & */
+.content {
+    float: left;
+    width: 50%;
+    margin: 2.5% 0;
+}
+
+/* Font Styling */
+.team-info {
+    font-weight: bold;
+    font-family: 'Poppins', serif;
+    color: #FFFFFF;
+    margin: 5%;
+    font-size: 1.25rem;
+}
+
+.introduction {
+    font-size: 1.2rem;
+    font-family: 'Atkinson Hyperlegible', serif;
+    color: #FFFFFF;
+    margin: 5%;
+}
+
+
+/* Div Container for Image */
+.image-container {
+    float: right;
+    width: 45%;
+    margin: 2.5%;
+}
+
+#photo {
+    height: auto; /* Adjustable height to maintain with aspect ratio */
+    width: 100%; /* Sets the Width of the image 100% of the .image-container width */
+    border: 4px solid #FFFFFF;
+}
+
+figcaption {
+    color: #FFFFFF;
+    font-family: 'Atkinson Hyperlegible', serif;
+}
+
+/* --- SECTION 2 START (Timetable)--- */
+.timetable {
+    margin: 10%;
+    width: 80%;
+}
+
+table {
+    background: #FFFFFF;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+tr, td {
+    font-family: 'Poppins', serif;
+    font-size: 1rem;
+    width: 16rem;
+    height: 4.5rem;
+    border: 1px solid #C0C5C9;
+    text-align: left;
+    color: #546E7A;
+    padding: 1rem;
+    box-sizing: border-box; /* Keep sizing consistent*/
+}
+
+th {
+    background-color: #6565E7;
+    color: #FFFFFF;
+}
+
+.time-interval, th {
+    text-align: center;
+    border: 1px solid #C0C5C9;
+    width: 10rem;
+    font-weight: bold;
+}
+
+/* COS10026 */
+.classes.cos10026 {
+    position: relative;
+    z-index: 1;
+    background: linear-gradient(135deg, #c08eee, #ee8edc);
+}
+
+.classes.cos10026:hover {
+    transform: scale(1.3);
+    z-index: 2;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(269deg, #c08eee, #ee8edc, #8e8eee, #8eee8e, #ee8e8e, #c08eee); /*When hovered cycle through this color gradient set*/
+    background-size: 1200% 1200%;
+    animation: gradientCycle 4s linear infinite;
+}
+
+@keyframes gradientCycle {
+    0% {
+        background-position: 0 48%;
+    }
+    100% {
+        background-position: 100% 48%;
+    }
+}
+
+
+/* --- Section 3 START (Email Us)--- */
+.email {
+    background-color: white;
+    height: auto;
+    text-align: center;
+    font-size: 2em;
+    padding: 3%;
+    transition: background .5s ease-out, color .5s ease-out; /* Add transition for background and text color */
+    position: relative; /* Add position relative for pseudo-element */
+    overflow: hidden; /* Hide overflow to ensure linear gradient stays within bounds */
+}
+
+.email > a {
+    text-decoration: none;
+    color: #000000;
+    font-family: "Atkinson Hyperlegible", serif;
+    display: inline-block;
+    transition: background .300s ease-out, color .300s ease-out;
+    position: relative; /* Ensure <a> is positioned relative */
+    z-index: 2; /* Set z-index higher than ::before pseudo-element */
+}
+
+.email::before {
+    content: ''; /* Add pseudo-element for linear gradient */
+    position: absolute;
+    top: 0;
+    left: -100%; /* Initially position gradient outside the element */
+    width: 200%; /* Double the width for smooth transition */
+    height: 100%;
+    background: linear-gradient(to right, #26A641 50%, #FFFFFF 50%);
+    transition: left .500s ease-out; /* Transition only the left position */
+    z-index: 1; /* Set z-index behind <a> tag */
+}
+
+.email:hover::before {
+    left: 0; /* Move gradient to the right on hover */
+    cursor: pointer; /* Show pointer cursor on hover */
+}
+
+.email > a:hover {
+    color: #FFFFFF;
+}
+
+
+/* --- Section 4 START (Meet the Team) --- */
+
+/* Container for the dl (meet the team) container */
+.horizontal-dl {
+    font-family: "Playfair-Display", serif !important;
+    height: 65vh;
+    margin: 3.5em 5em;
+    display: flex;
+}
+
+dl {
+    margin: 4.5em;
+    text-align: left;
+    color: #FFFFFF;
+    position: relative;
+    transition: 100ms;
+}
+
+dl:hover {
+    border-radius: 10px; /* Add border radius for rounded corners */
+    transform: scale(1.5);
+    color: #F77591;
+}
+
+.github-link {
+    text-decoration: none;
+}
+
+dt {
+    font-size: 4em;
+    font-family: "Playfair-Display", serif;
+}
+
+dd {
+    font-size: 1.5em;
+    margin-top: 0.6rem;
+    margin-left: 2rem;
+    font-family: "Playfair-Display", serif;
+}
+
+/* --- ABOUT US END --- */
+
+
+/* --- ENHANCEMENTS START --- */
+.enhancements_main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 38px;
+    margin: 20px 15%;
+}
+
+.enhancements_article {
+    padding: 20px 40px;
+    grid-column-start: 1;
+    grid-column-end: 6;
+    background-color: #272626;
+    border-radius: 25px;
+    color: #D9D9D9;
+}
+
+.enhancements_article > a {
+    text-decoration: none;
+    color: #D5B778;
+    font-size: 1.25rem;
+}
+
+.enhancements_article p > a {
+    text-decoration: none;
+    color: #D5B778;
+    font-size: 1.25rem;
+}
+
+.enhancements_article > img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.enhancements_article > h1 {
+
+    margin-bottom: 2%;
+    font-weight: unset;
+    text-transform: uppercase;
+    color: #D5B778;
+    font-size: 2rem;
+    letter-spacing: .2rem;
+    width: auto;
+    white-space: nowrap;
+}
+
+.enhancements_article > h2 {
+    margin-top: 2%;
+    letter-spacing: .1rem;
+    color: #D9D9D9;
+    text-transform: uppercase;
+    grid-column-start: 3;
+    grid-row-start: 1;
+    width: auto;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    white-space: nowrap;
+}
+
+.enhancements_article > p {
+    font-size: 1.25rem;
+}
+
+.code {
+    display: grid;
+    font-family: Consolas, "courier new", serif;
+    color: #FFFFFF;
+    font-size: 1.25rem;
+    background-color: #201f1f;
+    border: 2px solid gray;
+    padding: 2%;
+}
+
+.code {
+    font-family: Consolas, "courier new";
+    color: #FFFFFF;
+    background-color: #000000;
+    padding: 2px;
+    font-size: 1.25rem;
+}
+
+/* --- ENHANCEMENTS END --- */
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+    form {
+        place-self: center;
+        min-width: 90%; /* Adjust form width on smaller screens */
+        margin: 20px 5%; /* Adjust form margin on smaller screens */
+    }
+
+    /* Pushes list to below logo */
+    nav > ul {
+        float: none;
+        margin: 10px auto;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    /* Adjusts margin between list items */
+    nav > ul > li {
+        margin: 10px;
+    }
+
+    .homepageMain {
+        grid-template-columns: repeat(2, minmax(0, 1fr)); /* Adjust grid columns for smaller screens */
+    }
+
+    .homepageSection1 > div {
+        display: inline-block;
+        float: none;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* H1 styling & position */
+    .homepageSection1 > div > h1 {
+        text-transform: uppercase;
+        border-right: .15em solid #D9D9D9;
+        font-weight: unset;
+        letter-spacing: .4rem;
+        font-size: 1.15rem;
+        text-align: center;
+        color: #D9D9D9;
+        margin: 0;
+    }
+
+    .homepageButton {
+        text-transform: uppercase;
+        background-color: #26A641;
+        color: #000000;
+        text-decoration: none;
+        border-radius: 25px;
+        border: none;
+        padding: 15px 30px; /* Adjust padding */
+        margin: 20px auto; /* Center align and add margin */
+        grid-column: 1 / -1; /* Span across all columns for these sections on smaller screens */
+    }
+
+    .homepageSection1, .homepageSection3, .homepageSection5 {
+        grid-column: 1 / -1; /* Span across all columns for these sections on smaller screens */
+    }
+
+    .homepageSection2, .homepageSection4 {
+        grid-column: 1 / span 2; /* Span two columns for these sections on smaller screens */
+    }
+
+    .homepageSection4 > iframe {
+        height: 30vw; /* Adjust iframe height for smaller screens */
+    }
+}

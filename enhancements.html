@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- No clue what this does currently -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Enhancements</title>
+    <link rel="icon" href="images/TheHiveLogo.svg">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+<header>
+    <!-- Navigation Here -->
+    <nav>
+        <a href="index.html"
+        ><img src="images/TheHiveLogo.svg" alt="The Hive Logo"></a>
+        <ul>
+            <li><a href="jobs.html">Jobs</a></li>
+            <li><a href="apply.html">Apply</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="enhancements.html">Enhancements</a></li>
+            <li><a href="mailto:104461559@student.swin.edu.au">Email</a></li>
+        </ul>
+        <hr>
+    </nav>
+</header>
+
+<!-- Directly related to central topic -->
+<main class="enhancements_main">
+    <section class="enhancements_article">
+        <h1>Media Queries</h1>
+        <h2>How it goes beyond the basic requirements of the assignment</h2>
+        <p>
+            Since we have been making extensive use of the css
+            <code>grid</code> property, implementing responsiveness via
+            <code>min-width</code> and <code>max-width</code> was insufficient for
+            our website. Therefore, the <code>@media</code> query was used in
+            order to dynamically modify css depending on the screen-size.
+        </p>
+        <h2>Code Needed</h2>
+        <p></p>
+        <p>This type of code is designed to dynamically modify the form elements to change the margin and width on
+            smaller screens</p>
+        <br>
+        <div class="code">
+        <pre>
+        @media screen and (max-width: 768px) {
+            form {
+                place-self: center;
+                min-width: 90%;  /* Adjust form width on smaller screens */
+                margin: 20px 5%;  /* Adjust form margin on smaller screens */
+            }
+        }</pre>
+        </div>
+        <h2>References</h2>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries">Using Media
+            Queries - MDN</a>
+        <h2>Examples</h2>
+        <p>Try resizing these pages to see the media query in effect!</p>
+        <br>
+        <a href="index.html">Homepage</a>
+        <br>
+        <a href="apply.html">Apply</a>
+    </section>
+
+    <section class="enhancements_article">
+        <h1>Section Expansion</h1>
+        <h2>How it goes beyond the basic requirements of the assignment</h2>
+        <p>
+            <code>Jobs.html</code> quickly became encumbered, after many iterations it became clear an enhancement was
+            necessary.
+            making use of the minimal knowledge provided by lab 3. <code>Jobs.html</code> exploits the usage of form
+            related tags.
+            The page (Jobs), presents itself in a compact version allowing the user to only see relevant information.
+            This is done by concealing the additional information within <code>span</code> tags,
+            combined with <code>input: checkbox</code> and <code>label</code> a dynamic button is created to control the
+            function.
+        </p>
+        <h2>Code Needed</h2>
+        <p>
+            This code uses form attributes in conjunction with pseudo-classes/elements to create a fluid user
+            experience.
+        </p>
+        <br>
+        <div class="code">
+        <pre>
+        /* Removes checkbox */
+        .readMoreState {
+            display: none;
+        }
+
+        /* Hides content */
+        .readMoreTarget {
+            display: none;
+            opacity: 0;
+            max-height: 0;
+            font-size: 0;
+            transition: .25s ease;
+        }
+
+        /* Sets content visible */
+        .readMoreState:checked ~ .readMoreWrapper .readMoreTarget {
+            display: block;
+            opacity: 1;
+            font-size: inherit;
+            max-height: 999em;
+        }
+
+        /* Changes label text (Before) */
+        .readMoreState ~ .readMoreTrigger:before {
+            content: 'Show More'
+        }
+
+        /* Changes label text (After) */
+        .readMoreState:checked ~ .readMoreTrigger:before {
+            content: 'Show Less'
+        }
+        </pre>
+        </div>
+        <h2>References</h2>
+        <a href="https://developer.mozilla.org/en-US/docs/Glossary/Semantics">Semantic Layout</a>
+        <br>
+        <a href="https://css-tricks.com/snippets/css/complete-guide-grid/">Grid Styling</a>
+        <br>
+        <a href="https://www.w3schools.com/css/css_pseudo_classes.asp">Pseudo Classes</a>
+        <br>
+        <a href="https://www.w3schools.com/css/css_pseudo_elements.asp">Pseudo Elements</a>
+        <br>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes">Pseudo Classes [Extended]</a>
+        <br>
+        <a href="https://www.w3schools.com/css/css_form.asp">HTML forms</a>
+        <br>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form">HTML forms [Extended]</a>
+        <h2>Examples</h2>
+        <p>
+            Click <a href="jobs.html">Here</a> to try it out!
+        </p>
+        <br>
+        <img src="images/Example1.png" height="394" width="700" alt="Example1 - Collapsed">
+        <img src="images/Example2.png" height="394" width="700" alt="Example2 - Expanded">
+    </section>
+</main>
+
+<!-- Footer -->
+<hr>
+<footer>
+    <p>Copyright <span>&copy;</span> 2024 The Hive All Rights Reserved</p>
+
+    <p><span>&#127760;</span> Australia | English</p>
+</footer>
+</body>
+</html>
